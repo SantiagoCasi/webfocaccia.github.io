@@ -1,0 +1,287 @@
+ * {box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+ }
+
+
+
+
+
+/*  Fondo de pantalla */
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+  position: relative; 
+  overflow: hidden;   /* Oculta el exceso vertical si la imagen es más alta */
+  height: 210px;      /* Altura fija deseada para el encabezado */
+  width: 100%;
+  box-shadow: 0 21px 80px rgb(85, 75, 63);
+ 
+
+
+
+
+  
+}
+
+
+
+
+
+
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+ 
+  /*  animaciones */
+  background-color: #120f05;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.8s ease-in;
+
+  
+
+
+
+}
+
+header:hover::after {
+  transform: scaleX(2);
+
+ 
+}
+
+header img {
+    
+  position: absolute;
+  display:flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;  
+  opacity: 0.9;  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Focacciamo  - Titulo en el header*/
+
+
+
+.TituloHeader{
+    
+    display:inline-flexbox;
+    text-align: center;
+    margin: 30px;
+    opacity: 0.9;
+    font-size: 35px;
+    color:rgb(31, 30, 27);
+    transition: all 0.5s;
+    animation: meltRightScale 8s ease-in-out infinite;
+}
+
+
+@keyframes meltRightScale {
+  90%, 90% {
+    opacity: 1;
+    transform: translateX(9) scaleX(1);
+  }
+  70% {
+    opacity: 0;
+    transform: translateX(15px) scaleX(1.8);
+  }
+}
+
+
+
+
+
+
+
+
+.pizza-gif {
+  width: 160px; /* ancho fijo */
+  height: auto; /* mantiene proporción */
+  opacity: 0.8; /* transparencia */
+  position: absolute; /* para ubicarla donde quieras */
+ 
+  right: 10%;
+  transition: transform 0.3s;
+}
+
+.pizza-gif:hover {
+  transform: scale(1.5); /* crece al poner el cursor */
+}
+
+
+
+
+body {font-family:sans-serif;
+    
+  font-size:16px;
+  color:#000000;
+  background-color:#dddddd;
+}
+
+
+
+
+.fondoMain{
+  display:flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+main {
+
+  display:flex;
+  max-width: 100%;
+  height: 800px;
+  background-color:#ffffff; 
+
+}
+
+ 
+
+
+
+
+
+
+.caja1{
+  display: flex;
+  gap: 5%; /* separación uniforme entre los contenedores */
+  background-image: url(../imagenes/fondoCaja1.JPG);
+  padding:40px;
+  position:absolute;
+  margin: 12%;
+  border-radius: 25px;
+  width: 75%; 
+  height: 500px;
+  justify-content: space-around;
+  box-shadow: 0 10px 50px rgb(71, 68, 67);
+
+}
+
+.pedidos{
+  
+  color: #000000;
+  border-radius: 25px;
+  display: flex;
+  margin: 4%;
+  background-color: rgb(227, 135, 23);
+  justify-content: space-around; 
+  align-items: center; 
+  width: 55%;
+  height: 80%;
+
+
+
+
+}
+@keyframes revolveScale {
+  20% { transform: translate(10px,20px) rotate(180deg) scale(0.8); }
+  100% { transform: translate(0) rotate(0) scale(1); opacity: 1; }
+}
+
+
+
+.pedidos:hover{
+opacity: 0.6;
+  transform: translate(-150px, -150px) rotate(-90deg) scale(3);
+  animation: revolveScale 1.5s forwards;
+}
+
+
+h3{
+  color:rgb(15, 11, 1);
+  font-size: 190%;
+  text-shadow: 2px 2px 2px #f0df82;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* Vinculo hacia instagram */         
+.instaGif {
+  background-color: bisque;
+  position:relative;
+  border-radius: 10px;
+  
+  display:flex;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  max-width: 15%;
+  max-height: 15%;
+
+  padding: 15px 15px 15px 15px;
+   
+
+}
+
+
+
+
+
+
+
+footer {
+  background-color: rgb(240, 208, 183);  
+  box-shadow: 0 21px 80px rgb(85, 75, 63);
+           
+  padding:20px;             
+  
+  
+
+}
+
+
+
+
+
+
+  
